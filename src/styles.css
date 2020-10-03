@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.lap__number {
+  font-size: 150px;
+}
+
+.lap__text,
+.total__time,
+.total__time__text {
+  font-size: 28px;
+}
+
+button {
+  background-color: #f9f9f9;
+  border: 1px solid #b7b7b7;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 22px;
+  outline: none;
+}
+
+.button__text {
+  font-size: 20px;
+  font-weight: bold;
+}

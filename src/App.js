@@ -1,30 +1,9 @@
 import React, { useState, useEffect } from "react";
+import ShowLaps from "./components/ShowLaps";
+import ShowTime from "./components/ShowTime";
+import Button from "./components/Button";
 
-const ShowLaps = (props) => {
-  return (
-    <p>
-      {props.voltas} <br />
-      Volta(s)
-    </p>
-  );
-};
-
-const ShowTime = (props) => {
-  const time = props.time;
-  const minutes = Math.round(time / 60);
-  const seconds = time % 60;
-  const minutesStr = minutes < 10 ? "0" + minutes : minutes;
-  const secondsStr = seconds < 10 ? "0" + seconds : seconds;
-
-  return (
-    <p>
-      {`${minutesStr}:${secondsStr}`} <br />
-      {props.text}
-    </p>
-  );
-};
-
-const Button = (props) => <button onClick={props.onClick}>{props.text}</button>;
+import "./styles.css";
 
 function App() {
   const [numLaps, setNumLaps] = useState(0);
@@ -65,7 +44,7 @@ function App() {
 
   return (
     <div className="App">
-      <ShowLaps voltas={numLaps} />
+      <ShowLaps laps={numLaps} />
       <Button text="-" onClick={decrement} />
       <Button text="+" onClick={increment} />
       <ShowTime time={time} text="Tempo total" />
