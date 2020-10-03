@@ -34,7 +34,9 @@ function App() {
   };
 
   const decrement = () => {
-    setNumLaps(numLaps - 1);
+    if (numLaps > 0) {
+      setNumLaps(numLaps - 1);
+    }
   };
 
   const handleReset = () => {
@@ -54,7 +56,7 @@ function App() {
           text="Tempo medio por volta"
         />
       )}
-      <Button text="Iniciar" onClick={toggleRunning} />
+      <Button text={running ? "Pausar" : "Iniciar"} onClick={toggleRunning} />
       <Button text="Reiniciar" onClick={handleReset} />
     </div>
   );
